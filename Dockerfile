@@ -7,4 +7,4 @@ WORKDIR /thoregon
 COPY --chown=thoregon:thoregon . .
 # RUN npm ci --only=production
 USER thoregon
-CMD ["dumb-init", "node", "--experimental-loader ../evolux.modules/evolux.universe/bootloader.mjs", "protouniverse.mjs" ]
+CMD ["dumb-init", "node", "--experimental-loader", "../evolux.modules/evolux.universe/bootloader.mjs", "protouniverse.mjs" ]
