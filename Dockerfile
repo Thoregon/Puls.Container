@@ -5,6 +5,6 @@ RUN addgroup thoregon
 RUN adduser --system --ingroup thoregon --no-create-home thoregon
 WORKDIR /thoregon
 COPY --chown=thoregon:thoregon . .
-RUN npm ci --only=production
+# RUN npm ci --only=production
 USER thoregon
 CMD ["dumb-init", "node", "--experimental-loader ../evolux.modules/evolux.universe/bootloader.mjs", "protouniverse.mjs" ]
